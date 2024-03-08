@@ -1,3 +1,4 @@
+/* Body styles */
 .body{
     
     font-family: Arial, Helvetica, sans-serif;
@@ -6,12 +7,14 @@
     padding: 0;
 
 }
+/* Header styles */
 h1{
     text-align: left;
     color: #FFE6E8;
     margin-left: 225px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+/* Game board container styles */
 #board{
     height: 540px;
     width: 630px;
@@ -21,7 +24,7 @@ h1{
     flex-wrap: wrap;
     border-radius: 15px;
 }
-
+/* Individual tile styles */
 .tile{
     height: 70px;
     width: 70px;
@@ -31,15 +34,15 @@ h1{
     border: 5px solid #4897A6;
     transition: background-color 0.3s ease;
 }
-
+/* Red game piece styles */
 .red-piece{
     background-color: #E34234;
 }
-
+/* Blue game piece styles */
 .blue-piece{
     background-color: #00FFFF;
 }
-
+/* Button styles */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -56,6 +59,7 @@ button {
 button:hover {
     background-color: #45a049;
 }
+/* Image styles */
 img {
     
     width: 650px;
@@ -64,6 +68,7 @@ img {
     position: absolute;
     margin-top: 60px;
 }
+/* Draggable piece styles */
 .draggable-piece {
     width: 65px;
     height: 65px;
@@ -72,7 +77,7 @@ img {
     position: absolute;
     z-index: 1;
 }
-
+/* Chip styles */
 .chip {
     width: 65px;
     height: 65px;
@@ -81,29 +86,29 @@ img {
     position: absolute;
     z-index: 1;
 }
-
+/* Red chip styles */
 .red-chip {
     background-color: #E34234;
 }
-
+/* Blue chip styles */
 .blue-chip {
     background-color: #00FFFF;
 }
-
+/* Red chip position */
 #redChip {
     top: 20px;
     left: 20px;
     margin-left: 660px;
     margin-top: 400px;
 }
-
+/* Blue chip position */
 #blueChip {
     top: 20px;
     left: 80px;
     margin-left: 600px;
     margin-top: 220px;
 }
-
+/* Player titles styles */
 #player1Title,
 #player2Title {
     font-size: 20px;
@@ -113,29 +118,29 @@ img {
     margin-top: 5px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
+/* Player 1 title position */
 #player1Title {
     top: 75px; 
     left: 40px; 
     margin-top: 189px;
     margin-left: 720px;
 }
-
+/* Player 2 title position */
 #player2Title {
     top: 75px; 
     left: 100px; 
     margin-top: 370px;
     margin-left: 660px;
 }
-
+/* Dragging chip opacity */
 .chip.dragging {
     opacity: 0.5;
 }
-
+/* Tile hover effect */
 .tile.hovered {
     border: 2px dashed black;
 }
-
+/* Falling animation */
 @keyframes fall {
     0% {
         transform: translateY(-500px);
@@ -145,7 +150,7 @@ img {
         transform: translateY(0);
     }
 }
-
+/* Falling piece animation */
 .falling-piece {
     animation: fall 1.0s ease-out;
 }
