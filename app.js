@@ -148,7 +148,7 @@ function setPiece() {
     }
     // Function to handle game reset
     function resetGame() {
-        currPlayer = playerRed;
+        currPlayer = playerYellow;
         gameOver = false;
         document.getElementById("winner").innerText = "";
         setGame();
