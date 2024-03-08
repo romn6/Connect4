@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+// Initialize variables
 var playerRed = "R";
 var playerYellow= "Y";
 var currPlayer = playerRed;
@@ -14,7 +15,7 @@ window.onload = function(){
     setGame();
     makePiecesDraggable();
 }
-
+// Function to set up the game
 function setGame(){
     
     document.getElementById("board").innerHTML = '';
@@ -36,7 +37,7 @@ for(let r = 0; r < row; r++){
         board.push(row);
     }
 }
-
+// Function to handle setting a game piece
 function setPiece() {
     if(gameOver){
         return;
@@ -68,6 +69,7 @@ function setPiece() {
     checkWinner();
 
 }
+    // Function to check for a winner
         function checkWinner() {
              
             for(let r = 0; r < row; r++) {
@@ -126,7 +128,7 @@ function setPiece() {
             }
         }
     
-
+// Function to handle setting the winner of the game.
     function setWinner(r, c){
         let winner = document.getElementById("winner");
         if(board[r][c] == playerRed){
@@ -144,7 +146,7 @@ function setPiece() {
 
         setTimeout(resetGame, 3000);
     }
-    
+    // Function to handle game reset
     function resetGame() {
         currPlayer = playerRed;
         gameOver = false;
@@ -153,7 +155,7 @@ function setPiece() {
         makePiecesDraggable();
         
     }
-
+    // Function to make game pieces draggable
     function makePiecesDraggable() {
         const redChip = document.getElementById("redChip");
         const blueChip = document.getElementById("blueChip");
@@ -175,7 +177,7 @@ function setPiece() {
     function handleDragOver(event) {
         event.preventDefault();
     }
-    
+    //Function to handle the dropping of a game piece into a column.
     function handleDrop(event) {
         event.preventDefault();
         const pieceId = event.dataTransfer.getData("pieceId");
@@ -189,7 +191,7 @@ function setPiece() {
         checkWinner();
         currPlayer = currPlayer === playerRed ? playerYellow: playerRed;
     }
-    
+    //Function to update the game board with the current state of the game.
     function updateBoard() {
         for (let r = 0; r < row; r++) {
             for (let c = 0; c < columns; c++) {
@@ -203,7 +205,7 @@ function setPiece() {
             }
         }
     }
-    
+    //Function to animate the dropping of a game piece into the board.
     function dropAnimation(row, col, player) {
         const cellId = row.toString() + "-" + col.toString();
         const cell = document.getElementById(cellId);
@@ -211,7 +213,7 @@ function setPiece() {
         piece.className = player === playerRed ? "red-chip" : "blue-chip";
         cell.appendChild(piece);
     }
-    
+    //Function to find the lowest empty spot in a column for dropping a game piece
     function findLowestEmptySpot(col) {
         for (let r = row - 1; r >= 0; r--) {
             if (board[r][col] === ' ') {
@@ -220,7 +222,7 @@ function setPiece() {
         }
         return -1; 
     }
-    
+    // Event listener for when the DOM content is loaded
     const resetButton = document.getElementById("resetButton");
     resetButton.addEventListener("click", resetGame);
 });
