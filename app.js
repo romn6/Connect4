@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
 // Initialize variables
 var playerRed = "R";
 var playerYellow= "Y";
-var currPlayer = playerRed;
+var currPlayer = playerYellow;
 
 var gameOver = false;
 var board;
