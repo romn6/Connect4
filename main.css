@@ -1,0 +1,151 @@
+.body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    text-align: left;
+    color: #FFE6E8;
+    margin-left: 225px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#board{
+    height: 540px;
+    width: 630px;
+    background-color: #1d6d86;
+    border: 10px solid #6A5ACD;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.tile{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    border: 5px solid #4897A6;
+    transition: background-color 0.3s ease;
+}
+
+.red-piece{
+    background-color: #E34234;
+}
+
+.blue-piece{
+    background-color: #00FFFF;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+img {
+    
+    width: 650px;
+    height: 550px;
+    margin-left: 790px;
+    position: absolute;
+    margin-top: 60px;
+}
+.draggable-piece {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.chip {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+.red-chip {
+    background-color: #E34234;
+}
+
+.blue-chip {
+    background-color: #00FFFF;
+}
+
+#redChip {
+    top: 20px;
+    left: 20px;
+    margin-left: 660px;
+    margin-top: 400px;
+}
+
+#blueChip {
+    top: 20px;
+    left: 80px;
+    margin-left: 600px;
+    margin-top: 220px;
+}
+
+#player1Title,
+#player2Title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFE6E8;
+    position: absolute;
+    margin-top: 5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#player1Title {
+    top: 75px; 
+    left: 40px; 
+    margin-top: 189px;
+    margin-left: 720px;
+}
+
+#player2Title {
+    top: 75px; 
+    left: 100px; 
+    margin-top: 370px;
+    margin-left: 660px;
+}
+
+.chip.dragging {
+    opacity: 0.5;
+}
+
+.tile.hovered {
+    border: 2px dashed black;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-500px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.falling-piece {
+    animation: fall 1.0s ease-out;
+}
