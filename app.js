@@ -55,11 +55,11 @@ function setPiece() {
     board[r][c] = currPlayer;
     let tile = document.getElementById(r.toString() + "-" + c.toString());
     if(currPlayer == playerRed){
-        tile.classList.add("red-piece");
+        tile.classList.add("blue-piece");
         currPlayer = playerYellow;
     } 
     else {
-        tile.classList.add("blue-piece");
+        tile.classList.add("red-piece");
         currPlayer = playerRed;
     }
 
